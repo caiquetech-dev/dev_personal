@@ -55,6 +55,12 @@ GITHUB_RESUME_PATH=kevin_CV/data/resume-content.json
 
 `GITHUB_BRANCH` and `GITHUB_RESUME_PATH` have the defaults shown above. `POSTGRES_URL` and `POSTGRES_PRISMA_URL` are also accepted when `DATABASE_URL` is not set.
 
+When importing this repository into Vercel, set the project Root Directory to:
+
+```text
+kevin_CV
+```
+
 The database table is created automatically on first read/write:
 
 ```sql
