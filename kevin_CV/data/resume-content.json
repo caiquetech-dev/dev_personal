@@ -1,0 +1,266 @@
+{
+  "ko": {
+    "languageLabel": "한국어",
+    "hero": {
+      "name": "Junyong Lee",
+      "role": "Founder, CaiqueTech / PI SpeedLAB",
+      "summary": "스마트폰 결합형 야구 스피드 레이더 PI SpeedGun / PI Link를 발명, 특허화, 전시 검증, 글로벌 출시 준비까지 연결한 스포츠테크 하드웨어 창업자.",
+      "ctaLabel": "핵심 성과 보기"
+    },
+    "sections": [
+      {
+        "id": "founder",
+        "title": "창업 및 제품화",
+        "navLabel": "창업 여정",
+        "showInNav": true,
+        "bullets": [
+          "2024년 CaiqueTech 창업, PI SpeedLAB 브랜드 및 미국 법인 기반 구축.",
+          "PI SpeedGun / PI Link: 스마트폰 USB-C 연결형 24GHz 모듈러 레이더 개발.",
+          "앱 기반 실시간 속도 표시, 기록 저장, 영상 기록, 날짜별 분석 기능 설계.",
+          "CES 2025/2026, SPOEX 2025, KT Wiz 데모로 글로벌/현장 검증 진행.",
+          "Kickstarter 기반 글로벌 D2C 출시 준비 및 약 $150 가격 포지셔닝."
+        ]
+      },
+      {
+        "id": "ip",
+        "title": "지식재산 및 기술 자산",
+        "navLabel": "지식재산",
+        "showInNav": false,
+        "bullets": [
+          "탈착식 도플러 센서 + 스마트폰 카메라 기반 투구 속도/동작/궤적 분석 특허 확보.",
+          "하드웨어 센서, 모바일 앱, 데이터 분석을 묶는 구조를 IP로 보호.",
+          "아이디어 단계가 아닌 사업화 가능한 기술 아키텍처로 고도화."
+        ]
+      },
+      {
+        "id": "partnerships",
+        "title": "파트너십 및 시장 신뢰도",
+        "navLabel": "파트너십",
+        "showInNav": false,
+        "bullets": [
+          "강정호와 MOU를 통해 엘리트 훈련 환경 검증 기반 확보.",
+          "Dustin Nippert 야구 아카데미 MOU로 유소년/아마추어/엘리트 시장 접점 확보.",
+          "경희대학교 체육대학원 DNA+ 학과와 협력하여 산학/스포츠 데이터 협업 확장."
+        ]
+      },
+      {
+        "id": "programs",
+        "title": "정부/대학 지원사업 수주",
+        "navLabel": "정부지원사업",
+        "showInNav": true,
+        "bullets": [
+          "중소벤처기업부 수출바우처 프로그램 선정.",
+          "예비창업패키지 선정.",
+          "경희대학교 창업보육센터 및 캠퍼스타운 프로그램 선정.",
+          "고려대학교 KU-3DS, 경희대학교 시제품 개발지원 선정.",
+          "경희대학교 LINC 창업동아리 등 창업 연계 프로그램 다수 수행."
+        ]
+      },
+      {
+        "id": "awards",
+        "title": "수상 및 공신력",
+        "navLabel": "수상",
+        "showInNav": false,
+        "bullets": [
+          "창업진흥원장상, 스포츠산업 스타트업 아이디어 공모전 등 수상.",
+          "IP 창조 패턴캠프 대상, 지식재산 학회 우수논문상 수상.",
+          "U300 학생창업 유망팀 2023/2024/2025 3년 연속 선정."
+        ]
+      },
+      {
+        "id": "skills",
+        "title": "개발 스킬셋",
+        "subtitle": "Hardware + Mobile + Productization",
+        "navLabel": "개발 스킬셋",
+        "showInNav": true,
+        "bullets": [
+          "센서 융합: 도플러 레이더 모듈과 스마트폰 카메라 결합 설계.",
+          "모바일 연동: USB-C 기반 디바이스 연결과 앱 UX 흐름 설계.",
+          "데이터 기능: 속도 측정, 기록 저장, 영상 연계, 날짜별 성과 분석.",
+          "제품 개발: 프로토타입 제작, 전시 데모, 인증(KC/FCC) 준비, 양산 전환 기획.",
+          "사업개발: 파트너십/MOU, 글로벌 전시, 크라우드펀딩 채널 전략 수립."
+        ]
+      },
+      {
+        "id": "language",
+        "title": "어학 능력",
+        "navLabel": "어학 능력",
+        "showInNav": true,
+        "badges": [
+          {
+            "label": "TOEIC",
+            "value": "975"
+          },
+          {
+            "label": "OPIc",
+            "value": "추가 예정",
+            "pending": true
+          }
+        ],
+        "bullets": [
+          "해외 전시 및 글로벌 파트너 커뮤니케이션이 가능한 영어 역량.",
+          "CES 부스 운영, 해외 바이어 미팅, 미국 법인 커뮤니케이션 대응 가능.",
+          "OPIc 등급/응시일은 업데이트 예정."
+        ]
+      },
+      {
+        "id": "education",
+        "title": "학교 및 해외 경험",
+        "navLabel": "학교/해외 경험",
+        "showInNav": true,
+        "bullets": [
+          "경희대학교 재학/졸업 이력 기반의 스포츠테크 창업 경험.",
+          "New Zealand Red Beach Primary School 어학 학습 경험.",
+          "HKUST IPLP Program 참여 경험.",
+          "Texcorp Program 참여 경험."
+        ]
+      }
+    ],
+    "links": [
+      {
+        "label": "LinkedIn",
+        "href": "https://kr.linkedin.com/in/junyong-lee-2b3328273/"
+      },
+      {
+        "label": "PI SpeedLAB",
+        "href": "https://www.pi-speedlab.us/product"
+      },
+      {
+        "label": "TechCrunch CES 기사",
+        "href": "https://techcrunch.com/2025/01/07/this-baseball-radar-gun-plugs-into-an-iphone/"
+      }
+    ]
+  },
+  "en": {
+    "languageLabel": "English",
+    "hero": {
+      "name": "Junyong Lee",
+      "role": "Founder, CaiqueTech / PI SpeedLAB",
+      "summary": "Sports-tech hardware founder who led PI SpeedGun / PI Link from invention and patenting to exhibition validation and global commercialization readiness.",
+      "ctaLabel": "View Key Achievements"
+    },
+    "sections": [
+      {
+        "id": "founder",
+        "title": "Startup and Commercialization",
+        "navLabel": "Startup Journey",
+        "showInNav": true,
+        "bullets": [
+          "Founded CaiqueTech in 2024 and established PI SpeedLAB brand plus U.S. entity foundation.",
+          "Developed PI SpeedGun / PI Link, a smartphone USB-C connected 24GHz modular radar.",
+          "Designed app features for real-time speed display, logging, video capture, and day-by-day analytics.",
+          "Validated the product at CES 2025/2026, SPOEX 2025, and KT Wiz fan demo events.",
+          "Prepared Kickstarter-based global D2C launch with an accessible price target around $150."
+        ]
+      },
+      {
+        "id": "ip",
+        "title": "IP and Core Technology",
+        "navLabel": "IP",
+        "showInNav": false,
+        "bullets": [
+          "Secured patents for pitching speed/motion/trajectory acquisition using detachable Doppler sensor and smartphone camera.",
+          "Protected an integrated stack connecting hardware sensing, mobile app, and performance data.",
+          "Converted product concept into a defensible and commercialization-ready technical architecture."
+        ]
+      },
+      {
+        "id": "partnerships",
+        "title": "Partnerships and Validation",
+        "navLabel": "Partnerships",
+        "showInNav": false,
+        "bullets": [
+          "Built MOU-based field validation with Kang Jung-ho in elite training use cases.",
+          "Signed MOU with Dustin Nippert's academy to access youth, amateur, and elite baseball channels.",
+          "Expanded academic collaboration with Kyung Hee University DNA+ graduate sports program."
+        ]
+      },
+      {
+        "id": "programs",
+        "title": "Government and University Grants",
+        "navLabel": "Government Programs",
+        "showInNav": true,
+        "bullets": [
+          "Selected for Korea Export Voucher program.",
+          "Selected for Pre-Startup Package.",
+          "Selected for Kyung Hee University incubation and Campus Town support.",
+          "Secured prototype development support from KU-3DS and Kyung Hee University.",
+          "Completed multiple startup-linked university programs including LINC startup club."
+        ]
+      },
+      {
+        "id": "awards",
+        "title": "Awards and Recognition",
+        "navLabel": "Awards",
+        "showInNav": false,
+        "bullets": [
+          "Recognized by startup and sports-industry competitions including President-level startup award tracks.",
+          "Won Grand Prize at IP Creation Patent Camp and Best Paper in IP research society.",
+          "Selected as U300 student entrepreneurship promising team for three consecutive years (2023-2025)."
+        ]
+      },
+      {
+        "id": "skills",
+        "title": "Development Skill Set",
+        "subtitle": "Hardware + Mobile + Productization",
+        "navLabel": "Development Skills",
+        "showInNav": true,
+        "bullets": [
+          "Sensor fusion design: detachable Doppler radar module integrated with smartphone camera workflow.",
+          "Mobile integration design: USB-C connected hardware and app experience architecture.",
+          "Data features: speed measurement, history logging, video-linked records, and trend analysis.",
+          "Product engineering: prototype development, demo deployment, certification planning (KC/FCC), manufacturing readiness.",
+          "Business execution: MOU partnerships, international exhibitions, and crowdfunding go-to-market strategy."
+        ]
+      },
+      {
+        "id": "language",
+        "title": "Language Proficiency",
+        "navLabel": "Language",
+        "showInNav": true,
+        "badges": [
+          {
+            "label": "TOEIC",
+            "value": "975"
+          },
+          {
+            "label": "OPIc",
+            "value": "TBD",
+            "pending": true
+          }
+        ],
+        "bullets": [
+          "Strong English communication for overseas exhibitions and partner conversations.",
+          "Operational capability for CES booth presentations, buyer meetings, and U.S. entity communication.",
+          "OPIc grade and test date will be updated."
+        ]
+      },
+      {
+        "id": "education",
+        "title": "Education and Global Exposure",
+        "navLabel": "Education/Global",
+        "showInNav": true,
+        "bullets": [
+          "Kyung Hee University background with sports-tech entrepreneurship execution.",
+          "English-language study experience at Red Beach Primary School in New Zealand.",
+          "Participant in HKUST IPLP Program.",
+          "Participant in Texcorp Program."
+        ]
+      }
+    ],
+    "links": [
+      {
+        "label": "LinkedIn",
+        "href": "https://kr.linkedin.com/in/junyong-lee-2b3328273/"
+      },
+      {
+        "label": "PI SpeedLAB",
+        "href": "https://www.pi-speedlab.us/product"
+      },
+      {
+        "label": "TechCrunch CES Article",
+        "href": "https://techcrunch.com/2025/01/07/this-baseball-radar-gun-plugs-into-an-iphone/"
+      }
+    ]
+  }
+}
