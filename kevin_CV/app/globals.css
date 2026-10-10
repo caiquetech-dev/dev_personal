@@ -1228,3 +1228,243 @@ a {
     page-break-inside: avoid;
   }
 }
+
+/* ---------- Toss brand theme (/career) ---------- */
+.career-canvas {
+  background: #f2f4f7;
+}
+
+.career-paper {
+  --primary: #3182f6;
+  --primary-strong: #191f28;
+  --accent: #3182f6;
+  --foreground: #191f28;
+  --muted: #6b7684;
+  --surface: #ffffff;
+  --surface-soft: #f7f9fc;
+  --surface-border: #e5e8ec;
+  --surface-border-soft: #eef0f3;
+  --line: #191f28;
+
+  border-radius: 28px;
+  box-shadow: 0 12px 40px rgba(17, 34, 68, 0.08);
+}
+
+.career-paper .eyebrow {
+  color: #3182f6;
+}
+
+.career-paper .divider-thick {
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #3182f6 0 28%, #e5e8ec 28% 100%);
+}
+
+.career-name {
+  color: #191f28;
+}
+
+.career-target {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.career-target-pill {
+  background: #3182f6;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.92rem;
+  padding: 8px 16px;
+  border-radius: 999px;
+  box-shadow: 0 4px 12px rgba(49, 130, 246, 0.25);
+}
+
+.career-target-teams {
+  color: #6b7684;
+  font-size: 0.9rem;
+}
+
+.career-section > h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #191f28;
+  border-bottom: 1px solid #e5e8ec;
+  padding-bottom: 12px;
+}
+
+.career-section > h2::before {
+  content: "";
+  width: 6px;
+  height: 1.15em;
+  border-radius: 3px;
+  background: #3182f6;
+  flex: none;
+}
+
+.career-company h3 {
+  color: #191f28;
+  font-size: 1.18rem;
+}
+
+.career-company {
+  border-bottom-color: #e5e8ec;
+}
+
+.career-company-meta,
+.career-company-business {
+  color: #6b7684;
+}
+
+.career-project {
+  background: #ffffff;
+  border: 1px solid #e5e8ec;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(17, 34, 68, 0.04);
+}
+
+.career-project-title {
+  color: #191f28;
+}
+
+.career-star {
+  color: #3182f6;
+}
+
+.career-project-body dt {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 16px;
+  padding: 4px 11px;
+  border-radius: 8px;
+  background: #e8f3ff;
+  color: #3182f6;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.career-project-body dt::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #3182f6;
+}
+
+.career-dt-result {
+  background: #3182f6 !important;
+  color: #ffffff !important;
+}
+
+.career-dt-result::before {
+  background: #ffffff !important;
+}
+
+.career-list li::before {
+  border-radius: 50%;
+  background: #b0b8c1;
+}
+
+.career-list--result li::before {
+  background: #3182f6;
+}
+
+.summary-wheel {
+  gap: 18px;
+}
+
+.wheel-card {
+  background: #ffffff;
+  border: 1px solid #e5e8ec;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(17, 34, 68, 0.05);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.wheel-card:hover {
+  transform: translateY(-4px);
+  border-color: #3182f6;
+  box-shadow: 0 14px 28px rgba(49, 130, 246, 0.16);
+}
+
+.wheel-card h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #191f28;
+}
+
+.wheel-card h3::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #3182f6;
+  flex: none;
+}
+
+.wheel-center {
+  border: none;
+  background: radial-gradient(
+    circle at 32% 24%,
+    #4d95ff 0%,
+    #3182f6 55%,
+    #0b5cd5 100%
+  );
+  box-shadow: 0 18px 44px rgba(49, 130, 246, 0.35);
+}
+
+.wheel-center-img {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 10px;
+  box-shadow: 0 6px 18px rgba(11, 92, 213, 0.3);
+}
+
+.wheel-center-name {
+  color: #ffffff;
+}
+
+.wheel-center-desc {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.career-total {
+  background: #e8f3ff;
+  border-radius: 14px;
+  padding: 12px 16px;
+  color: #4e5968;
+}
+
+.career-total strong {
+  color: #3182f6;
+}
+
+.career-table th {
+  color: #3182f6;
+}
+
+.career-table th,
+.career-table td {
+  border-bottom-color: #eef0f3;
+}
+
+.career-footer {
+  border-top-color: #e5e8ec;
+  color: #b0b8c1;
+  text-align: center;
+}
+
+@media print {
+  .career-paper {
+    box-shadow: none;
+  }
+}

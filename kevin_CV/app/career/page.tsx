@@ -247,15 +247,19 @@ function CompanyBlock({
 
 export default function CareerPage() {
   return (
-    <main className="resume-canvas">
+    <main className="resume-canvas career-canvas">
       <article className="cv-paper career-paper">
         <header className="career-hero">
           <p className="eyebrow">경력기술서 · Career Narrative</p>
           <h1 className="career-name">이준용</h1>
-          <p className="career-target">
-            지원 직무: <strong>토스플레이스 Android Developer</strong> (로컬연결
-            Team / Client Platform Team)
-          </p>
+          <div className="career-target">
+            <span className="career-target-pill">
+              토스플레이스 Android Developer
+            </span>
+            <span className="career-target-teams">
+              로컬연결 Team / Client Platform Team
+            </span>
+          </div>
         </header>
 
         <div className="divider-thick" aria-hidden="true" />
