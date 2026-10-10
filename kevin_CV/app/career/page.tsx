@@ -18,14 +18,14 @@ const WHEEL: WheelCard[] = [
     dir: "45",
     title: "앱 · 카메라 경험 (Kotlin / Swift)",
     items: [
-      "Kotlin(Android) · Swift(iOS) 네이티브 카메라 모듈 직접 개발",
-      "각 기기에서 고속 촬영과 촬영 오버레이(속도 표시) 구현",
+      "Kotlin(Android) · Swift(iOS) 카메라 기능 활용 — 사용자에게 flawless한 동영상 촬영과 영상 속도 Overlay 경험 제공",
       "실시간 속도 표시 · 기록 저장 · 날짜별 분석 UX 설계",
+      "베타 배포(누적 다운로드 500)로 실제 사용자 피드백 기반 촬영 경험 개선",
     ],
   },
   {
     dir: "135",
-    title: "검증 · 품질 (숫자로 증명)",
+    title: "검증 · 품질",
     items: [
       "PCB · 스마트폰 · PC · J-Link 연결 HIL 폐루프 자동 검증 환경 구축",
       "2026 산학 공동연구에서 iOS BLE 실효 전송속도 210kbps 확보",
@@ -117,6 +117,22 @@ const PISPEEDLAB: Project[] = [
   },
 ];
 
+const MILITARY: Project[] = [
+  {
+    no: "①",
+    title: "군 서버 체계 운영 및 배포",
+    overview:
+      "국방통합데이터센터 제2센터 서버체계 관제병으로 복무하며 Linux/UNIX CLI 환경에서 육·해·공군 WEB/WAS 서버 운영을 지원",
+    role: "서버 관제 및 배포 담당 (공군 전자계산병)",
+    actions: [
+      "서버 로그를 매일 압축·보관하는 정기 작업 수행",
+      "쉘 스크립트를 활용해 WAS 서버 재기동 자동화",
+      "각 군 개발대에서 전달받은 변경사항을 운영 절차에 따라 실 서버에 배포",
+    ],
+    results: [],
+  },
+];
+
 const CAIQUETECH: Project[] = [
   {
     no: "①",
@@ -127,7 +143,7 @@ const CAIQUETECH: Project[] = [
     role: "메인 개발자 (펌웨어 · 통신 · Android/iOS 앱 전 구간)",
     actions: [
       "STM32F373 MCU 펌웨어: DMA/Ring Buffer 기반 20kHz 도플러 신호 수집, Delta 무손실·ADPCM 손실 압축 구현",
-      "Kotlin(Android) · Swift(iOS) 네이티브 카메라 모듈 직접 구현 — 각 기기에서 고속 촬영 · 촬영 오버레이 지원, 실시간 속도 표시 · 기록 저장 · 날짜별 분석 UX",
+      "Kotlin(Android) · Swift(iOS) 카메라 기능을 활용해 사용자가 앱에서 flawless한 동영상 촬영과 영상 속도 Overlay를 할 수 있는 촬영 UX 구현, 실시간 속도 표시 · 기록 저장 · 날짜별 분석 설계",
       "멀티 디바이스 대응: 센서·회로 리비전 조합을 모듈형 연결 계층으로 추상화 — 연결 문제를 디바이스별이 아닌 계층으로 해결",
       "UI/UX: 측정 중에도 한눈에 읽히는 실시간 화면 구조 설계, 오프라인 현장(구장·전시회)에서 네트워크 없이 동작하도록 로컬 저장·분석 구조 적용",
     ],
@@ -158,7 +174,7 @@ const CAIQUETECH: Project[] = [
 const TECH_STACK = [
   [
     "Mobile",
-    "Kotlin (Android 네이티브 모듈), Swift (iOS 네이티브 모듈), Dart 앱 개발 (2024년~현재)",
+    "Kotlin (Android) · Swift (iOS) 카메라·영상 기능, Dart 앱 개발 (2024년~현재)",
   ],
   [
     "연결/기기",
@@ -176,8 +192,8 @@ const TECH_STACK = [
 
 const MOTIVATION = [
   "“앱이 하드웨어를 직접 제어해본 개발자”라는 경력이 토스플레이스와 정확히 맞습니다. POS·단말처럼 디바이스 사이의 연결 UX와 연결 안정성을 다루는 로컬연결 Team의 문제(불안정한 링크에서도 끊기지 않는 연결)는 제가 PI-Link에서 BLE·펌웨어·앱 전 구간을 책임지며 풀어온 문제와 동일합니다.",
-  "OS·펌웨어와의 협업, 멀티플랫폼 SDK — MCU 펌웨어를 직접 쓰고 BLE 스택을 튜닝하면서, 앱 한 쪽만 바꾸면 안 되는 문제가 어떻게 전체 성능을 좌우하는지 체감했습니다. 문제를 계층으로 나눠 원인 분리·검증하는 방식(HIL·자동화)을 몸에 익혔습니다.",
-  "품질과 안정성에 대한 끈질긴 책임감: 미탐율 7%→1% 수준의 개선을 “끝까지” 추적했고, 검증 결과를 숫자로 공유하는 방식으로 팀의 판단 근거를 만들겠습니다. Kotlin 기반 코드베이스의 품질·생산성 개선과 TDS를 활용한 인터랙션 구현은 빠르게 학습해 기여하겠습니다.",
+  "OS·펌웨어와의 협업, 멀티플랫폼 SDK - MCU 펌웨어를 직접 쓰고 BLE 스택을 튜닝하면서 앱 한 쪽만 바꾸면 안 되는 문제가 어떻게 전체 성능을 좌우하는지 체감했습니다. 문제를 계층으로 나눠 원인 분리·검증하는 방식(HIL·자동화)을 몸에 익혔습니다.",
+  "품질과 안정성에 대한 끈질긴 책임감: 미탐율 7%→1% 수준의 개선을 “끝까지” 추적했고 검증 결과를 숫자로 공유하는 방식으로 팀의 판단 근거를 만들겠습니다. Kotlin 기반 코드베이스의 품질·생산성 개선과 TDS를 활용한 인터랙션 구현은 빠르게 학습해 기여하겠습니다.",
 ];
 
 function ProjectBlock({ project }: { project: Project }) {
@@ -202,14 +218,18 @@ function ProjectBlock({ project }: { project: Project }) {
             ))}
           </ul>
         </dd>
-        <dt className="career-dt-result">정량적 성과 (임팩트)</dt>
-        <dd>
-          <ul className="career-list career-list--result">
-            {project.results.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-        </dd>
+        {project.results.length > 0 ? (
+          <>
+            <dt className="career-dt-result">정량적 성과 (임팩트)</dt>
+            <dd>
+              <ul className="career-list career-list--result">
+                {project.results.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </dd>
+          </>
+        ) : null}
       </dl>
     </div>
   );
@@ -297,11 +317,6 @@ export default function CareerPage() {
               </section>
             ))}
           </div>
-          <p className="career-total">
-            <strong>총 경력 3년 5개월</strong> — 개발·창업 1년 7개월 / 공군
-            전산(전자계산병· 국방통합데이터센터) 1년 10개월 · 스타트업 2곳
-            창업·개발 리드
-          </p>
         </section>
 
         <section className="career-section">
@@ -319,6 +334,13 @@ export default function CareerPage() {
             role="개발부 공동대표"
             business="PI-Link(스마트폰 연동 스피드레이더) 제품 개발 (공동 창업 · 기술 담당)"
             projects={CAIQUETECH}
+          />
+          <CompanyBlock
+            name="국방통합데이터센터 제2센터 (국방부)"
+            period="2021.05 ~ 2023.02"
+            role="서버체계 관제병 · 공군 전자계산병"
+            business="Linux/UNIX CLI 환경에서 육·해·공군 WEB/WAS 서버 운영 지원"
+            projects={MILITARY}
           />
         </section>
 
