@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import type { BadgeItem } from "@/data/resume";
 
 type Badge = {
@@ -16,6 +17,18 @@ type SectionProps = {
   hideTitle?: boolean;
 };
 
+/** Renders a bullet string, turning **lead** segments into bold text. */
+function renderBullet(bullet: string) {
+  const parts = bullet.split(/\*\*([^*]+)\*\*/g);
+  return parts.map((part, index) =>
+    index % 2 === 1 ? (
+      <strong key={index}>{part}</strong>
+    ) : (
+      <Fragment key={index}>{part}</Fragment>
+    ),
+  );
+}
+
 export default function Section({
   id,
   title,
@@ -26,17 +39,16 @@ export default function Section({
   hideTitle = false,
 }: SectionProps) {
   return (
-    <section
-      id={id}
-      className={`section-card section-card--${variant}`}
-    >
+    <section id={id} className={`section-card section-card--${variant}`}>
       {title && !hideTitle ? (
         <header className="section-header">
           <h2>{title}</h2>
           {subtitle ? <p>{subtitle}</p> : null}
         </header>
       ) : null}
-      {subtitle && hideTitle ? <p className="section-subtitle">{subtitle}</p> : null}
+      {subtitle && hideTitle ? (
+        <p className="section-subtitle">{subtitle}</p>
+      ) : null}
       {badges && badges.length > 0 ? (
         <div className="badge-list">
           {badges.map((badge) => (
@@ -50,7 +62,7 @@ export default function Section({
       {bullets.length > 0 ? (
         <ul>
           {bullets.map((bullet) => (
-            <li key={bullet}>{bullet}</li>
+            <li key={bullet}>{renderBullet(bullet)}</li>
           ))}
         </ul>
       ) : null}
