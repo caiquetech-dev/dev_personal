@@ -193,28 +193,7 @@
         ]
       }
     ],
-    "links": [
-      {
-        "label": "LinkedIn",
-        "href": "https://kr.linkedin.com/in/junyong-lee-2b3328273/"
-      },
-      {
-        "label": "PI SpeedLAB",
-        "href": "https://www.pi-speedlab.us/product"
-      },
-      {
-        "label": "TechCrunch CES 기사",
-        "href": "https://techcrunch.com/2025/01/07/this-baseball-radar-gun-plugs-into-an-iphone/"
-      },
-      {
-        "label": "Kickstarter",
-        "href": "https://www.kickstarter.com/projects/1359404817/turn-your-smartphone-into-a-smart-speed-radar"
-      },
-      {
-        "label": "CES 2025 보도 (StartupN)",
-        "href": "https://www.startupn.kr/news/articleView.html?idxno=49718"
-      }
-    ]
+    "links": []
   },
   "en": {
     "languageLabel": "English",
@@ -410,27 +389,6 @@
         ]
       }
     ],
-    "links": [
-      {
-        "label": "LinkedIn",
-        "href": "https://kr.linkedin.com/in/junyong-lee-2b3328273/"
-      },
-      {
-        "label": "PI SpeedLAB",
-        "href": "https://www.pi-speedlab.us/product"
-      },
-      {
-        "label": "TechCrunch CES Article",
-        "href": "https://techcrunch.com/2025/01/07/this-baseball-radar-gun-plugs-into-an-iphone/"
-      },
-      {
-        "label": "Kickstarter",
-        "href": "https://www.kickstarter.com/projects/1359404817/turn-your-smartphone-into-a-smart-speed-radar"
-      },
-      {
-        "label": "CES 2025 Coverage (StartupN)",
-        "href": "https://www.startupn.kr/news/articleView.html?idxno=49718"
-      }
-    ]
+    "links": []
   }
 }
