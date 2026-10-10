@@ -269,10 +269,10 @@ export default function CareerPage() {
           <div className="summary-wheel">
             <div className="wheel-center">
               <Image
-                src="/pi-link-module.png"
-                alt="PI-Link 24GHz 도플러 레이더 모듈"
-                width={670}
-                height={670}
+                src="/pi-link-hero.png"
+                alt="PI-Link 모듈과 연결해 속도 47 MPH를 측정 중인 앱 화면"
+                width={1200}
+                height={675}
                 className="wheel-center-img"
                 priority
               />

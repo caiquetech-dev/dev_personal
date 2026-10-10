@@ -990,8 +990,8 @@ a {
 
 .wheel-center-img {
   width: auto;
-  max-width: 84%;
-  max-height: 56%;
+  max-width: 92%;
+  max-height: 60%;
   object-fit: contain;
 }
 
@@ -1424,8 +1424,8 @@ a {
 
 .wheel-center-img {
   background: #ffffff;
-  border-radius: 18px;
-  padding: 10px;
+  border-radius: 16px;
+  padding: 8px;
   box-shadow: 0 6px 18px rgba(11, 92, 213, 0.3);
 }
 
