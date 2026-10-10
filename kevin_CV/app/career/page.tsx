@@ -1,0 +1,301 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "이준용 — 경력기술서 | Android Developer",
+  description:
+    "하드웨어–앱 엔드투엔드 연결 경험을 중심으로 한 이준용 경력기술서 (토스플레이스 Android Developer 지원)",
+};
+
+const SUMMARY = [
+  {
+    lead: "하드웨어–앱 Flawless 연결",
+    text: "24GHz 도플러 레이더 모듈 ↔ 스마트폰 앱을 USB-C·BLE로 잇는 연결 스택을 펌웨어~앱까지 직접 설계. 네트워크·링크가 불안정한 현장 환경에서도 끊기지 않는 전송 구조(509바이트 분할 전송·전송 시점 분산) 설계.",
+  },
+  {
+    lead: "Android 네이티브 · 성능/안정성",
+    text: "Kotlin(Android)·Swift(iOS) 네이티브 카메라 모듈 직접 개발, BLE 스택(Renesas DA14531) 튜닝 — 2026 산학 공동연구에서 iOS BLE 실효 210kbps 확보, Noise Floor 8dB 개선·탐지 거리 2m→5m, 미탐율 7%→1% 미만(투구 1,000회 기준).",
+  },
+  {
+    lead: "검증·품질 책임",
+    text: "PCB·스마트폰·PC·J-Link를 잇는 HIL 폐루프 자동 검증 환경 구축으로 ‘변경 전후’를 숫자로 판정하는 회귀 검증 체계 확립. 검증 결과를 반영해 초도양산 600대 · FCC·KC·CE·TELEC 4개국 인증 통과.",
+  },
+  {
+    lead: "플랫폼 확장성",
+    text: "여러 센서·회로 리비전 조합을 모듈형 연결 계층으로 추상화해 디바이스가 늘어도 앱 코드 변경 최소화 (여러 앱/제품/단말 조합의 공통 기능 재사용 문제와 동일 영역).",
+  },
+  {
+    lead: "총 경력 3년 5개월",
+    text: "개발·창업 1년 7개월 / 공군 전산(전자계산병·국방통합데이터센터) 1년 10개월 — 스타트업 2곳 창업·개발 리드.",
+  },
+];
+
+type Project = {
+  no: string;
+  title: string;
+  star?: boolean;
+  overview: string;
+  role: string;
+  actions: string[];
+  results: string[];
+};
+
+const PISPEEDLAB: Project[] = [
+  {
+    no: "①",
+    title: "초도양산 · 4개국 전파인증 · 글로벌 배포 프로젝트",
+    overview:
+      "실측 검증을 마친 PI-Link의 양산 전환과 FCC·KC·CE·TELEC 인증, 베타 배포까지의 제품화 품질 책임",
+    role: "제품 총괄 (개발 품질 · 인증 · 배포)",
+    actions: [
+      "신호 품질·전송 안정성 검증 결과를 설계에 반영한 초도양산 600대 진행",
+      "4개국 전파인증 시험 항목 정의 → 적합성 미달 항목 원인 분석 및 설계 수정 반복",
+      "베타 배포 운영(누적 다운로드 500) 및 정식 출시 준비 — 출시 전 회귀 체크리스트화",
+    ],
+    results: [
+      "FCC·KC·CE·TELEC 4개국 인증 통과, 초도양산 600대 완료",
+      "배포 전 검증 체계화로 인증 심사·양산 품질 리스크 최소화",
+    ],
+  },
+  {
+    no: "②",
+    title:
+      "모바일 엣지 AI · 저대역폭 전송 산학 공동연구 (경기RISE, 2026.06 ~ 2026.11)",
+    overview:
+      "경희대학교 산학협력단 · AE Lab(지도 교수 김상혁) 공동연구 — 스피드 레이더의 저대역폭 신호 전송 및 실시간 속도 추출 기술 개발 (기여도 85%)",
+    role: "앱·통신 개발 리드 (BLE 스택 · 검증 파트)",
+    actions: [
+      "BLE 스택 튜닝(Renesas DA14531): notification + 509바이트 분할 전송으로 대용량 패킷 수신 문제 해결",
+      "집중 전송 시 발생하는 레이더 노이즈 간섭을 스펙트로그램 분석으로 규명 → 전송 시점 분산으로 제어",
+      "iOS 데이터 미전달 이슈를 로그 분석으로 원인 규명 후 재설계, Python 도플러 분석 도구(파워 스펙트럼·스펙트로그램·CFAR)로 실측 기반 반복 검증",
+      "AE Lab과 CFAR 파라미터 튜닝, 회로부터 신호 처리까지 단계별 원인 분리·반복 검증",
+    ],
+    results: [
+      "iOS BLE 실효 전송속도 210kbps 확보 (목표 미달 → 원인 분석·해소)",
+      "전송 데이터율 240kbps → 110kbps 최적화, Noise Floor 8dB 개선",
+      "탐지 거리 2m → 5m, 투구 1,000회 기준 미탐율 7% → 1% 미만, 과검출률 6% → 1% 미만",
+    ],
+  },
+  {
+    no: "③",
+    title: "글로벌 고객 검증 및 플랫폼 제휴 (CES / Kickstarter / UNIDEN)",
+    overview:
+      "제품-시장 적합성(PMF)을 글로벌 채널로 검증하고 라이선스 파트너 확보",
+    role: "대표 (해외 사업 · 고객 대응 · 기술 설명)",
+    actions: [
+      "Kickstarter 캠페인 기획·운영, CES 2025/2026 부스에서 영어 제품 시연·기술 설명",
+      "미국 유소년 야구·소프트볼 시장 고객 인터뷰 50건 수행 → 요구사항을 제품 방향에 반영",
+      "레이더 전문기업 UNIDEN과 NDA 체결, 라이선스 생산 협의 진행",
+    ],
+    results: [
+      "Kickstarter 511명 백커 · $80,340 달성 (목표 $2,000 대비 40배)",
+      "인터뷰 기반 개선으로 해외 바이어 미팅 통과, 글로벌 제휴 협의 진행",
+    ],
+  },
+];
+
+const CAIQUETECH: Project[] = [
+  {
+    no: "①",
+    title: "하드웨어–앱 엔드투엔드 연결 플랫폼 개발",
+    star: true,
+    overview:
+      "24GHz 도플러 레이더 모듈과 스마트폰 앱을 USB-C·BLE로 연결하는 종단간 연결 스택 개발 — 기기 펌웨어, 통신 프로토콜, 앱 UX까지 한 사람이 끝까지 책임진 프로젝트",
+    role: "메인 개발자 (펌웨어 · 통신 · Android/iOS 앱 전 구간)",
+    actions: [
+      "STM32F373 MCU 펌웨어: DMA/Ring Buffer 기반 20kHz 도플러 신호 수집, Delta 무손실·ADPCM 손실 압축 구현",
+      "앱 개발: 실시간 속도 표시·기록 저장·영상 기록·날짜별 분석, 네이티브 카메라 모듈 Kotlin(Android)·Swift(iOS) 직접 구현",
+      "멀티 디바이스 대응: 센서·회로 리비전 조합을 모듈형 연결 계층으로 추상화 — 연결 문제를 디바이스별이 아닌 계층으로 해결",
+      "UI/UX: 측정 중에도 한눈에 읽히는 실시간 화면 구조 설계, 오프라인 현장(구장·전시회)에서 네트워크 없이 동작하도록 로컬 저장·분석 구조 적용",
+    ],
+    results: [
+      "등록 특허 2건(10-2674614·10-2861127) — 하드웨어–앱 결합 구조를 IP로 확보",
+      "센서·회로 리비전 변경에 강한 모듈형 연결 계층 구축 → 디바이스 확장 시 앱 재작업 최소화",
+      "실시간 속도 측정·영상 기록·날짜별 분석 앱 완성 → 후속 베타 배포(500)의 기반 마련",
+    ],
+  },
+  {
+    no: "②",
+    title: "실기기(HIL) 검증 자동화로 개발·검증 주기 단축",
+    overview:
+      "하드웨어와 앱을 동시에 바꿀 때마다 발생하던 수작업 검증·재현 문제 해결",
+    role: "검증 환경 설계 · 자동화 담당",
+    actions: [
+      "PCB·스마트폰·PC·J-Link 연결 HIL 폐루프 검증 환경 구축",
+      "펌웨어 빌드·업로드를 스크립트로 자동화, 실기기 수신 상태·전송 속도를 반복 측정",
+      "목표 미달 시 로그를 분석해 설정을 수정하고 변경 전후 결과를 비교하는 사이클 운영",
+    ],
+    results: [
+      "변경 전후 성능을 숫자로 판정하는 회귀 검증 체계 확립 → 하드웨어·앱 동시 변경 프로젝트의 품질 리스크 관리",
+      "측정·분석 자동화로 외부 의존 없이 하루 단위 반복 검증 가능",
+    ],
+  },
+];
+
+const TECH_STACK = [
+  [
+    "Mobile",
+    "Kotlin (Android 네이티브 모듈), Swift (iOS 네이티브 모듈), Dart 앱 개발 (2024년~현재)",
+  ],
+  [
+    "연결/기기",
+    "BLE (GATT, notification, MTU/분할 전송), USB-C, STM32 MCU 펌웨어, J-Link/HIL",
+  ],
+  [
+    "품질/자동화",
+    "Python (신호 분석·로그 분석 도구), Shell Script (빌드·업로드·측정 자동화)",
+  ],
+  [
+    "언어 역량",
+    "TOEIC 975, OPIc AL (영어 기술 소통 — 해외 전시·바이어 미팅 실무)",
+  ],
+];
+
+const MOTIVATION = [
+  "“앱이 하드웨어를 직접 제어해본 개발자”라는 경력이 토스플레이스와 정확히 맞습니다. POS·단말처럼 디바이스 사이의 연결 UX와 연결 안정성을 다루는 로컬연결 Team의 문제(불안정한 링크에서도 끊기지 않는 연결)는 제가 PI-Link에서 BLE·펌웨어·앱 전 구간을 책임지며 풀어온 문제와 동일합니다.",
+  "OS·펌웨어와의 협업, 멀티플랫폼 SDK — MCU 펌웨어를 직접 쓰고 BLE 스택을 튜닝하면서, 앱 한 쪽만 바꾸면 안 되는 문제가 어떻게 전체 성능을 좌우하는지 체감했습니다. 문제를 계층으로 나눠 원인 분리·검증하는 방식(HIL·자동화)을 몸에 익혔습니다.",
+  "품질과 안정성에 대한 끈질긴 책임감: 미탐율 7%→1% 수준의 개선을 “끝까지” 추적했고, 검증 결과를 숫자로 공유하는 방식으로 팀의 판단 근거를 만들겠습니다. Kotlin 기반 코드베이스의 품질·생산성 개선과 TDS를 활용한 인터랙션 구현은 빠르게 학습해 기여하겠습니다.",
+];
+
+function ProjectBlock({ project }: { project: Project }) {
+  return (
+    <div className="career-project">
+      <h4 className="career-project-title">
+        {project.no} 프로젝트명: {project.title}
+        {project.star ? (
+          <span className="career-star"> ⭐ 핵심 차별 경력</span>
+        ) : null}
+      </h4>
+      <dl className="career-project-body">
+        <dt>프로젝트 개요</dt>
+        <dd>{project.overview}</dd>
+        <dt>담당 역할</dt>
+        <dd>{project.role}</dd>
+        <dt>주요 수행 업무 (액션)</dt>
+        <dd>
+          <ul className="career-list">
+            {project.actions.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </dd>
+        <dt className="career-dt-result">정량적 성과 (임팩트)</dt>
+        <dd>
+          <ul className="career-list career-list--result">
+            {project.results.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </dd>
+      </dl>
+    </div>
+  );
+}
+
+function CompanyBlock({
+  name,
+  period,
+  role,
+  business,
+  projects,
+}: {
+  name: string;
+  period: string;
+  role: string;
+  business: string;
+  projects: Project[];
+}) {
+  return (
+    <section className="career-section">
+      <div className="career-company">
+        <h3>{name}</h3>
+        <p className="career-company-meta">
+          <span>{period}</span>
+          <span>{role}</span>
+        </p>
+      </div>
+      <p className="career-company-business">주요 사업: {business}</p>
+      {projects.map((project) => (
+        <ProjectBlock key={project.no + project.title} project={project} />
+      ))}
+    </section>
+  );
+}
+
+export default function CareerPage() {
+  return (
+    <main className="resume-canvas">
+      <article className="cv-paper career-paper">
+        <header className="career-hero">
+          <p className="eyebrow">경력기술서 · Career Narrative</p>
+          <h1 className="career-name">이준용</h1>
+          <p className="career-target">
+            지원 직무: <strong>토스플레이스 Android Developer</strong> (로컬연결
+            Team / Client Platform Team)
+          </p>
+          <p className="career-principle">
+            작성 원칙: 두괄식 · 개조식 · 숫자로 증명 (Toss Style)
+          </p>
+        </header>
+
+        <div className="divider-thick" aria-hidden="true" />
+
+        <section className="career-section">
+          <h2>핵심 역량 요약</h2>
+          <ul className="career-summary">
+            {SUMMARY.map((item) => (
+              <li key={item.lead}>
+                <strong>{item.lead}</strong>: {item.text}
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section className="career-section">
+          <h2>상세 경력 사항</h2>
+          <CompanyBlock
+            name="PI SpeedLAB, INC."
+            period="2025.10.22 ~ 재직 중"
+            role="대표이사 · 기술총괄"
+            business="스마트폰 결합형 도플러 스피드레이더 PI-Link — 하드웨어 + 앱 + 데이터 플랫폼 (창업자, 미국 법인)"
+            projects={PISPEEDLAB}
+          />
+          <CompanyBlock
+            name="카이큐테크 CaiqueTech"
+            period="2024.05.22 ~ 2025.01.01"
+            role="개발부 공동대표"
+            business="PI-Link(스마트폰 연동 스피드레이더) 제품 개발 (공동 창업 · 기술 담당)"
+            projects={CAIQUETECH}
+          />
+        </section>
+
+        <section className="career-section">
+          <h2>기술 스택</h2>
+          <table className="career-table">
+            <tbody>
+              {TECH_STACK.map(([area, stack]) => (
+                <tr key={area}>
+                  <th scope="row">{area}</th>
+                  <td>{stack}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </section>
+
+        <section className="career-section">
+          <h2>지원 동기 — 토스플레이스 Android Developer</h2>
+          <ul className="career-list">
+            {MOTIVATION.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </section>
+
+        <footer className="career-footer">
+          본 경력기술서와 이력서 PDF를 한 파일로 통합해 제출 (토스 지원 양식:
+          이력서 및 경력기술서 1개 파일, 최대 50MB)
+        </footer>
+      </article>
+    </main>
+  );
+}
