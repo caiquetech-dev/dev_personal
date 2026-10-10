@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -6,26 +7,49 @@ export const metadata: Metadata = {
     "하드웨어–앱 엔드투엔드 연결 경험을 중심으로 한 이준용 경력기술서 (토스플레이스 Android Developer 지원)",
 };
 
-const SUMMARY = [
+type WheelCard = {
+  dir: "45" | "135" | "225" | "315";
+  title: string;
+  items: string[];
+};
+
+const WHEEL: WheelCard[] = [
   {
-    lead: "하드웨어–앱 Flawless 연결",
-    text: "24GHz 도플러 레이더 모듈 ↔ 스마트폰 앱을 USB-C·BLE로 잇는 연결 스택을 펌웨어~앱까지 직접 설계. 네트워크·링크가 불안정한 현장 환경에서도 끊기지 않는 전송 구조(509바이트 분할 전송·전송 시점 분산) 설계.",
+    dir: "45",
+    title: "앱 · 카메라 경험 (Kotlin / Swift)",
+    items: [
+      "Kotlin(Android) · Swift(iOS) 네이티브 카메라 모듈 직접 개발",
+      "각 기기에서 고속 촬영과 촬영 오버레이(속도 표시) 구현",
+      "실시간 속도 표시 · 기록 저장 · 날짜별 분석 UX 설계",
+    ],
   },
   {
-    lead: "Android 네이티브 · 성능/안정성",
-    text: "Kotlin(Android)·Swift(iOS) 네이티브 카메라 모듈 직접 개발, BLE 스택(Renesas DA14531) 튜닝 — 2026 산학 공동연구에서 iOS BLE 실효 210kbps 확보, Noise Floor 8dB 개선·탐지 거리 2m→5m, 미탐율 7%→1% 미만(투구 1,000회 기준).",
+    dir: "135",
+    title: "검증 · 품질 (숫자로 증명)",
+    items: [
+      "PCB · 스마트폰 · PC · J-Link 연결 HIL 폐루프 자동 검증 환경 구축",
+      "2026 산학 공동연구에서 iOS BLE 실효 전송속도 210kbps 확보",
+      "Noise Floor 8dB 개선 · 탐지 거리 2m → 5m 향상",
+      "투구 1,000회 기준 미탐율 7% → 1% 미만 · 과검출률 6% → 1% 미만",
+    ],
   },
   {
-    lead: "검증·품질 책임",
-    text: "PCB·스마트폰·PC·J-Link를 잇는 HIL 폐루프 자동 검증 환경 구축으로 ‘변경 전후’를 숫자로 판정하는 회귀 검증 체계 확립. 검증 결과를 반영해 초도양산 600대 · FCC·KC·CE·TELEC 4개국 인증 통과.",
+    dir: "225",
+    title: "플랫폼 확장성 · 제품화",
+    items: [
+      "여러 센서 · 회로 리비전 조합을 모듈형 연결 계층으로 추상화 → 디바이스 확장 시 앱 재작업 최소화",
+      "초도양산 600대 · FCC·KC·CE·TELEC 4개국 인증 통과",
+      "등록 특허 2건으로 하드웨어–앱 결합 구조를 IP로 보호",
+    ],
   },
   {
-    lead: "플랫폼 확장성",
-    text: "여러 센서·회로 리비전 조합을 모듈형 연결 계층으로 추상화해 디바이스가 늘어도 앱 코드 변경 최소화 (여러 앱/제품/단말 조합의 공통 기능 재사용 문제와 동일 영역).",
-  },
-  {
-    lead: "총 경력 3년 5개월",
-    text: "개발·창업 1년 7개월 / 공군 전산(전자계산병·국방통합데이터센터) 1년 10개월 — 스타트업 2곳 창업·개발 리드.",
+    dir: "315",
+    title: "하드웨어–앱 Flawless 연결",
+    items: [
+      "24GHz 도플러 레이더 모듈 ↔ 스마트폰 앱을 USB-C · BLE로 잇는 연결 스택을 펌웨어~앱까지 직접 설계",
+      "불안정한 현장에서도 끊기지 않는 전송 구조 — 509바이트 분할 전송 · 전송 시점 분산",
+      "BLE 스택(Renesas DA14531) 튜닝",
+    ],
   },
 ];
 
@@ -103,7 +127,7 @@ const CAIQUETECH: Project[] = [
     role: "메인 개발자 (펌웨어 · 통신 · Android/iOS 앱 전 구간)",
     actions: [
       "STM32F373 MCU 펌웨어: DMA/Ring Buffer 기반 20kHz 도플러 신호 수집, Delta 무손실·ADPCM 손실 압축 구현",
-      "앱 개발: 실시간 속도 표시·기록 저장·영상 기록·날짜별 분석, 네이티브 카메라 모듈 Kotlin(Android)·Swift(iOS) 직접 구현",
+      "Kotlin(Android) · Swift(iOS) 네이티브 카메라 모듈 직접 구현 — 각 기기에서 고속 촬영 · 촬영 오버레이 지원, 실시간 속도 표시 · 기록 저장 · 날짜별 분석 UX",
       "멀티 디바이스 대응: 센서·회로 리비전 조합을 모듈형 연결 계층으로 추상화 — 연결 문제를 디바이스별이 아닌 계층으로 해결",
       "UI/UX: 측정 중에도 한눈에 읽히는 실시간 화면 구조 설계, 오프라인 현장(구장·전시회)에서 네트워크 없이 동작하도록 로컬 저장·분석 구조 적용",
     ],
@@ -232,22 +256,48 @@ export default function CareerPage() {
             지원 직무: <strong>토스플레이스 Android Developer</strong> (로컬연결
             Team / Client Platform Team)
           </p>
-          <p className="career-principle">
-            작성 원칙: 두괄식 · 개조식 · 숫자로 증명 (Toss Style)
-          </p>
         </header>
 
         <div className="divider-thick" aria-hidden="true" />
 
         <section className="career-section">
           <h2>핵심 역량 요약</h2>
-          <ul className="career-summary">
-            {SUMMARY.map((item) => (
-              <li key={item.lead}>
-                <strong>{item.lead}</strong>: {item.text}
-              </li>
+          <div className="summary-wheel">
+            <div className="wheel-center">
+              <Image
+                src="/pi-link-module.png"
+                alt="PI-Link 24GHz 도플러 레이더 모듈"
+                width={670}
+                height={670}
+                className="wheel-center-img"
+                priority
+              />
+              <p className="wheel-center-name">PI-Link</p>
+              <p className="wheel-center-desc">
+                스마트폰 결합형
+                <br />
+                24GHz 스피드 레이더
+              </p>
+            </div>
+            {WHEEL.map((card) => (
+              <section
+                key={card.dir}
+                className={`wheel-card wheel-card--${card.dir}`}
+              >
+                <h3>{card.title}</h3>
+                <ul className="career-list">
+                  {card.items.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </section>
             ))}
-          </ul>
+          </div>
+          <p className="career-total">
+            <strong>총 경력 3년 5개월</strong> — 개발·창업 1년 7개월 / 공군
+            전산(전자계산병· 국방통합데이터센터) 1년 10개월 · 스타트업 2곳
+            창업·개발 리드
+          </p>
         </section>
 
         <section className="career-section">
