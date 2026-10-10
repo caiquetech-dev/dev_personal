@@ -61,7 +61,8 @@ body {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: "Pretendard", "Inter", "Apple SD Gothic Neo", "Helvetica Neue",
+  font-family:
+    "Pretendard", "Inter", "Apple SD Gothic Neo", "Helvetica Neue",
     "Times New Roman", Times, serif;
   line-height: 1.52;
   -webkit-font-smoothing: antialiased;
@@ -455,7 +456,9 @@ a {
   color: var(--primary-strong);
   font-weight: 600;
   font-size: 0.82rem;
-  transition: background 0.15s, transform 0.15s;
+  transition:
+    background 0.15s,
+    transform 0.15s;
 }
 
 .footer-link-pill:hover {
@@ -861,4 +864,71 @@ a {
   .section-card {
     break-inside: avoid;
   }
+}
+
+/* ---------- Print / PDF export ---------- */
+@media print {
+  :root {
+    --background: #ffffff;
+    --surface: #ffffff;
+    --surface-soft: #f4f6fa;
+    --surface-border: #d8dce5;
+    --surface-border-soft: #e3e6ee;
+    --foreground: #1f2430;
+    --muted: #5e6678;
+    --primary: #1e2f63;
+    --primary-strong: #0f172a;
+    --accent: #4f46e5;
+    --line: #0f172a;
+    --badge-tbd: #935b09;
+    --badge-bg: #ffffff;
+    --badge-text: #212b42;
+    --badge-border: #d8dce6;
+    --toggle-border: #bfc5d1;
+    --toggle-bg: #ffffff;
+    --marker-bg: #ffffff;
+    --category-empty-border: #c9cfda;
+    --footer-hover-bg: #e6eaf3;
+  }
+
+  html,
+  body {
+    background: #ffffff !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .resume-canvas {
+    padding: 0 !important;
+  }
+
+  .cv-paper {
+    box-shadow: none !important;
+    border: none !important;
+    max-width: 100% !important;
+  }
+
+  .language-toggle,
+  .hero-contact-icon {
+    display: none !important;
+  }
+
+  .hero,
+  .category-card,
+  .section-card,
+  .extra-card,
+  .footer-links-card,
+  .badge-list {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+@page {
+  margin: 12mm;
 }
