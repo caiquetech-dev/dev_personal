@@ -1,3 +1,5 @@
+import type { BadgeItem } from "@/data/resume";
+
 type Badge = {
   label: string;
   value: string;
@@ -5,26 +7,36 @@ type Badge = {
 };
 
 type SectionProps = {
-  id: string;
-  title: string;
+  id?: string;
+  title?: string;
   subtitle?: string;
-  bullets: string[];
+  bullets?: string[];
   badges?: Badge[];
+  variant?: "default" | "entry";
+  hideTitle?: boolean;
 };
 
 export default function Section({
   id,
   title,
   subtitle,
-  bullets,
-  badges,
+  bullets = [],
+  badges = [],
+  variant = "default",
+  hideTitle = false,
 }: SectionProps) {
   return (
-    <section id={id} className="section-card">
-      <header className="section-header">
-        <h2>{title}</h2>
-        {subtitle ? <p>{subtitle}</p> : null}
-      </header>
+    <section
+      id={id}
+      className={`section-card section-card--${variant}`}
+    >
+      {title && !hideTitle ? (
+        <header className="section-header">
+          <h2>{title}</h2>
+          {subtitle ? <p>{subtitle}</p> : null}
+        </header>
+      ) : null}
+      {subtitle && hideTitle ? <p className="section-subtitle">{subtitle}</p> : null}
       {badges && badges.length > 0 ? (
         <div className="badge-list">
           {badges.map((badge) => (
@@ -35,11 +47,15 @@ export default function Section({
           ))}
         </div>
       ) : null}
-      <ul>
-        {bullets.map((bullet) => (
-          <li key={bullet}>{bullet}</li>
-        ))}
-      </ul>
+      {bullets.length > 0 ? (
+        <ul>
+          {bullets.map((bullet) => (
+            <li key={bullet}>{bullet}</li>
+          ))}
+        </ul>
+      ) : null}
     </section>
   );
 }
+
+export type { Badge, BadgeItem };

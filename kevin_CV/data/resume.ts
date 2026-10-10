@@ -13,12 +13,23 @@ export type BadgeItem = {
   pending?: boolean;
 };
 
+export type SectionGroup =
+  | "education"
+  | "experience"
+  | "certification"
+  | "award"
+  | "program"
+  | "exhibition"
+  | "milestone"
+  | "extra";
+
 export type ResumeSection = {
   id: string;
   title: string;
   subtitle?: string;
   navLabel: string;
   showInNav: boolean;
+  group?: SectionGroup;
   bullets: string[];
   badges?: BadgeItem[];
 };
@@ -28,6 +39,15 @@ export type Hero = {
   role: string;
   summary: string;
   ctaLabel: string;
+  email: string;
+  phone: string;
+  address: string;
+};
+
+export type ContactInfo = {
+  email: string;
+  phone: string;
+  address: string;
 };
 
 export type ResumeContent = {

@@ -206,9 +206,15 @@ function validateHero(hero: unknown, path: string, errors: string[]) {
     return;
   }
 
-  for (const key of ["name", "role", "summary", "ctaLabel"] satisfies Array<
-    keyof Hero
-  >) {
+  for (const key of [
+    "name",
+    "role",
+    "summary",
+    "ctaLabel",
+    "email",
+    "phone",
+    "address",
+  ] satisfies Array<keyof Hero>) {
     if (!isString(hero[key])) {
       errors.push(`${path}.${key} must be a string.`);
     }
@@ -253,6 +259,24 @@ function validateSections(
       !isString(section.subtitle)
     ) {
       errors.push(`${sectionPath}.subtitle must be a string when provided.`);
+    }
+
+    if (
+      section.group !== undefined &&
+      ![
+        "education",
+        "experience",
+        "certification",
+        "award",
+        "program",
+        "exhibition",
+        "milestone",
+        "extra",
+      ].includes(section.group as string)
+    ) {
+      errors.push(
+        `${sectionPath}.group must be one of education|experience|certification|award|program|exhibition|milestone|extra.`,
+      );
     }
 
     if (typeof section.showInNav !== "boolean") {

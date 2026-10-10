@@ -7,7 +7,19 @@ import type {
   Locale,
   ResumeContentByLocale,
   ResumeSection,
+  SectionGroup,
 } from "@/data/resume";
+
+const GROUP_OPTIONS: { value: SectionGroup; label: string }[] = [
+  { value: "education", label: "학력사항" },
+  { value: "experience", label: "경력사항" },
+  { value: "certification", label: "자격증" },
+  { value: "award", label: "수상경력" },
+  { value: "program", label: "사업화지원 실적" },
+  { value: "exhibition", label: "사업관련활동" },
+  { value: "milestone", label: "주요 마일스톤" },
+  { value: "extra", label: "추가 섹션" },
+];
 
 type SaveState =
   | { status: "idle"; message: string }
@@ -57,7 +69,10 @@ export default function AdminResumeEditor({
     });
   }
 
-  function updateHero(field: "name" | "role" | "summary" | "ctaLabel", value: string) {
+  function updateHero(
+    field: "name" | "role" | "summary" | "ctaLabel" | "email" | "phone" | "address",
+    value: string,
+  ) {
     editDraft((nextDraft) => {
       nextDraft[locale].hero[field] = value;
     });
@@ -80,7 +95,7 @@ export default function AdminResumeEditor({
 
   function updateSection(
     sectionIndex: number,
-    field: "title" | "subtitle" | "navLabel" | "showInNav",
+    field: "title" | "subtitle" | "navLabel" | "showInNav" | "group",
     value: string | boolean,
   ) {
     editDraft((nextDraft) => {
@@ -96,6 +111,12 @@ export default function AdminResumeEditor({
 
       if (field === "subtitle" && value === "") {
         delete section.subtitle;
+        return;
+      }
+
+      if (field === "group") {
+        const groupValue = String(value) as SectionGroup;
+        section.group = groupValue;
         return;
       }
 
@@ -378,6 +399,31 @@ export default function AdminResumeEditor({
               onChange={(event) => updateHero("ctaLabel", event.target.value)}
             />
           </label>
+          <label>
+            이메일
+            <input
+              type="email"
+              value={content.hero.email}
+              onChange={(event) => updateHero("email", event.target.value)}
+              placeholder="info@example.com"
+            />
+          </label>
+          <label>
+            전화번호
+            <input
+              value={content.hero.phone}
+              onChange={(event) => updateHero("phone", event.target.value)}
+              placeholder="010-0000-0000"
+            />
+          </label>
+          <label>
+            주소
+            <input
+              value={content.hero.address}
+              onChange={(event) => updateHero("address", event.target.value)}
+              placeholder="도시/동 까지만 입력해도 OK"
+            />
+          </label>
         </section>
 
         <section className="admin-shell admin-panel">
@@ -459,7 +505,7 @@ type SectionEditorProps = {
   onDeleteSection: (sectionId: string) => void;
   onUpdateSection: (
     sectionIndex: number,
-    field: "title" | "subtitle" | "navLabel" | "showInNav",
+    field: "title" | "subtitle" | "navLabel" | "showInNav" | "group",
     value: string | boolean,
   ) => void;
   onAddBullet: (sectionIndex: number) => void;
@@ -542,6 +588,21 @@ function SectionEditor({
               onUpdateSection(sectionIndex, "subtitle", event.target.value)
             }
           />
+        </label>
+        <label>
+          카테고리 그룹
+          <select
+            value={section.group ?? "extra"}
+            onChange={(event) =>
+              onUpdateSection(sectionIndex, "group", event.target.value)
+            }
+          >
+            {GROUP_OPTIONS.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
+          </select>
         </label>
         <label className="checkbox-field">
           <input
